@@ -59,3 +59,13 @@ initializer: init(){}, Customizing Initialization, Parameter Names and Argument 
 deinitialization: deinit{}, called automatically when instance being " = nil"  
 
 ## Optional Chaining
+optionalChaining: ex. instance.optionalClass?.property?, instance.optionalClass?[i].property[j]!  
+
+## Error Handling
+errorHandling: enum EnumName:Error{case someError}, throw EnumName.someError, func funcName() throws { throw/try }, do{try statement }catch error{}, if(try? statement) == nil {}, try! statement, func funcName() throws { defer{} } => defer{} is ensured to execute even if throw error. 
+
+## Type Casting
+typeCasting: Checking Type => if sub is super{}, Downcasting => if let x = sub as? super{}, "Any" and "AnyObject"  
+
+## Nested Types
+nestedType: ex. struct StructName{enum InnerEnum:Type{struct InnerStruct{}}}
