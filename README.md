@@ -69,3 +69,9 @@ typeCasting: Checking Type => if sub is super{}, Downcasting => if let x = sub a
 
 ## Nested Types
 nestedType: ex. struct StructName{enum InnerEnum:Type{struct InnerStruct{}}}
+
+## Extensions
+extension: extension SomeType:SomeProtocol{}, ext. Computed Properties, ext. Initializers, ext. Methods, ext. Mutating Instance Methods, ext. Subscripts, ext. Nested Type  
+
+## Protocols
+protocol: protocol ProtocolName{}, struct StructName:SomeProtocol{}, enum EnumName:SomeProtocol{}, ........not finished
