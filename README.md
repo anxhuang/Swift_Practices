@@ -74,4 +74,7 @@ nestedType: ex. struct StructName{enum InnerEnum:Type{struct InnerStruct{}}}
 extension: extension SomeType:SomeProtocol{}, ext. Computed Properties, ext. Initializers, ext. Methods, ext. Mutating Instance Methods, ext. Subscripts, ext. Nested Type  
 
 ## Protocols
-protocol: protocol ProtocolName{}, struct StructName:SomeProtocol{}, enum EnumName:SomeProtocol{}, ........not finished
+protocol: protocol ProtocolName{}, struct StructName:SomeProtocol{}, enum EnumName:SomeProtocol{}, Instance, Type, Mutating Method Requirements, Initializer Requirements, Protocols as Types  
+
+## Generics
+generic: func funcName<T>(arg: T){} <= Genetic Function with Type Parameter, struct StructName<Element>{} <= Genetic Type, Extending a Generic Type, Type Constraints, Associated Types (...not complete...)  
