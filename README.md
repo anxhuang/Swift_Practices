@@ -53,7 +53,7 @@ subscript: subscript(index: Int) -> returnType{} with get/set, use by Type[Index
 inheritance: class SubClass:SuperClass{}, Base Class, Override, super.property or super.func(), Overriding Property Observers, Preventing Overrides with final  
 
 ## Initialization
-initializer: init(){}, Customizing Initialization, Parameter Names and Argument Labels, Default Initializers, Memberwise Initializers for Structure Types, Initializer Delegation for Value Types (...not complete...)  
+initializer: init(){}, Customizing Initialization, Parameter Names and Argument Labels, Default Initializers, Memberwise Initializers for Structure Types, Initializer Delegation for Value Types (...parts of official docs)  
 
 ## Deinitialization
 deinitialization: deinit{}, called automatically when instance being " = nil"  
@@ -77,4 +77,5 @@ extension: extension SomeType:SomeProtocol{}, ext. Computed Properties, ext. Ini
 protocol: protocol ProtocolName{}, struct StructName:SomeProtocol{}, enum EnumName:SomeProtocol{}, Instance, Type, Mutating Method Requirements, Initializer Requirements, Protocols as Types  
 
 ## Generics
-generic: func funcName<T>(arg: T){} <= Genetic Function with Type Parameter, struct StructName<Element>{} <= Genetic Type, Extending a Generic Type, Type Constraints, Associated Types (...not complete...)  
+generic: func funcName<T>(arg: T){} <= Genetic Function with Type Parameter, struct StructName<Element>{} <= Genetic Type, Extending a Generic Type, Type Constraints, Associated Types (...part of official docs)  
+
