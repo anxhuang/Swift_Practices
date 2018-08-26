@@ -3,16 +3,16 @@
 import UIKit
 
 //Closure匿名函數
-let names = ["Chris", "Alex", "Ewa", "Barry", "Daniella"];
+let names = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
 
 
 
 //作法一：非closure(匿名)作法
 func backward(_ s1:String,_ s2:String) -> Bool{
-    return s1 > s2;
+    return s1 > s2
 }
 
-var reverseNames = names.sorted(by: backward);
+var reverseNames = names.sorted(by: backward)
 
 
 
@@ -41,7 +41,7 @@ reverseNames = names.sorted(by: {$0 > $1})
 //若傳出為bool, $0 和 $1可以省略
 reverseNames = names.sorted(by: > )
 
-//Trailing Closure: 若Closure身為最後一個代入的參數, 可以把{}放到後面; 若是唯一的參數, ()亦可以省略
+//Trailing Closure: 若Closure身為最後一個代入的參數, 可以把{}放到後面 若是唯一的參數, ()亦可以省略
 reverseNames = names.sorted{
     (s1:String,s2:String) -> Bool in
     return s1 > s2
@@ -51,33 +51,33 @@ reverseNames = names.sorted{
 let digitNames = [
     0: "Zero",  1: "One",2: "Two",  3: "Three", 4: "Four",
     5: "Five",  6: "Six",7: "Seven",8: "Eight", 9: "Nine"
-];
+]
 
-let numbers = [16, 58, 510];
+let numbers = [16, 58, 510]
 let strings = numbers.map{
     (number:Int) -> String in
-    var number = number; //因為input的number是let不好用 所以多var一個同名的來用
-    var output = "";
+    var number = number //因為input的number是let不好用 所以多var一個同名的來用
+    var output = ""
     repeat{
-        output = digitNames[number % 10]! + output;  //510餘數為0 -> Zero + output (因為個位數都先做 所以output放後面)
-        number /= 10; //510的商為51
+        output = digitNames[number % 10]! + output  //510餘數為0 -> Zero + output (因為個位數都先做 所以output放後面)
+        number /= 10 //510的商為51
     }while  number > 0
-    return output;
-};
+    return output
+}
 
 print(numbers)
 print(strings)
 
 //上面的map若用for寫
-var strings1:[String]=[];
+var strings1:[String]=[]
 for i in numbers {
-    var number = i; //因為i是let不好用 所以多var一個number來用
-    var output = "";
+    var number = i //因為i是let不好用 所以多var一個number來用
+    var output = ""
     repeat{
-        output = digitNames[number % 10]! + output;  //510餘數為0 -> Zero + output (因為個位數都先做 所以output放後面)
-        number /= 10; //510的商為51
+        output = digitNames[number % 10]! + output  //510餘數為0 -> Zero + output (因為個位數都先做 所以output放後面)
+        number /= 10 //510的商為51
     }while  number > 0
-    strings1.append(output);
+    strings1.append(output)
 }
 print(numbers)
 print(strings1)

@@ -20,7 +20,7 @@ let base = 5
 let power = 10
 var answer = 1
 for _ in 1...power {
-    answer *= base;
+    answer *= base
 }
 print("\(base) to the power \(power) is \(answer)")
 
@@ -65,7 +65,7 @@ while square < finalSquare {
     }
 }
 
-print("game over");
+print("game over")
 
 //repeat-while
 var payment = 300

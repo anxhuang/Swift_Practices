@@ -37,23 +37,23 @@ if turuipsAreDelicious {
 let http404Error = (404, "Not Found")
 
 //Tuple拆解
-let (statusCode, statusMessage) = http404Error;
-statusCode;
-statusMessage;
+let (statusCode, statusMessage) = http404Error
+statusCode
+statusMessage
 
 //可使用省略運算子 "_" (底線） 用來省略變數
-let (justTheStatusCode, _) = http404Error;
-justTheStatusCode;
+let (justTheStatusCode, _) = http404Error
+justTheStatusCode
 
 
 //使用索引取值
-http404Error.0;
-http404Error.1;
+http404Error.0
+http404Error.1
 
 //使用tag取值
-let http200Status = (statusCode:200, description:"OK");
-http200Status.statusCode;
-http200Status.description;
+let http200Status = (statusCode:200, description:"OK")
+http200Status.statusCode
+http200Status.description
 
 //Optional Type: Int? Float? Double? , 當不明確宣告的變數在接收return有可能為nil(即null)時 , 會自動轉型！！！ 避免錯誤！！！
 let possibelNumber = "123"

@@ -109,21 +109,21 @@ print(puzzleOutput)
 //guard else 提早離開
 func greet(person:[String:String]){ //代入dictionary
     guard let name = person["name"] else{ //注意！！ name 在此不是guard else區域變數！！ 為func變數
-        return;
+        return
     }
     
-    print("hello \(name)");
+    print("hello \(name)")
     
     guard let location = person["location"] else{
-        print("no location");
-        return;
+        print("no location")
+        return
     }
-    print(location);
+    print(location)
     
 }
 
-greet(person: ["name":"john"]);
-greet(person: ["name":"jane","location":"cupertino"]);
+greet(person: ["name":"john"])
+greet(person: ["name":"jane","location":"cupertino"])
 
 //Checking API Availability
 if #available(iOS 10, macOS 10.12, *) {

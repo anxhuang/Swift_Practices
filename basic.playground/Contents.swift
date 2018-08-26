@@ -7,7 +7,7 @@ var currentLoginAttempt = 0
 var welcomeMessage:String
 welcomeMessage = "Hello"
 
-//var red,green,blue; //error , need type annotation
+//var red,green,blue //error , need type annotation
 var color="white",picture=20
 var red,green,blue:Double
 

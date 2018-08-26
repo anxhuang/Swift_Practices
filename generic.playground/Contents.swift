@@ -88,14 +88,14 @@ func findIndex(ofString valueToFind:String, in array:[String]) -> Int?{
             return index
         }
     }
-    return nil;
+    return nil
 }
 
 
-let strings = ["cat", "dog", "llama", "parakeet", "terrapin"];
+let strings = ["cat", "dog", "llama", "parakeet", "terrapin"]
 
 if let foundIndex = findIndex(ofString: "llama", in: strings){
-    print("The index of llama is \(foundIndex)"); //2
+    print("The index of llama is \(foundIndex)") //2
 }
 
 //使用genetic function
@@ -105,55 +105,55 @@ func findIndex<T:Equatable>(of valueToFind:T, in array:[T]) -> Int?{
             return index
         }
     }
-    return nil;
+    return nil
 }
 
-let doubleIndex = findIndex(of: 9.3, in: [3.14159, 0.1, 0.25]);
+let doubleIndex = findIndex(of: 9.3, in: [3.14159, 0.1, 0.25])
 doubleIndex //nil
 
 
 //針對protocol associated Type
 protocol Container{
-    associatedtype Item; //自己定義一個名叫Item的Type
-    mutating func append(_ item:Item);
-    var count:Int {get};
-    subscript(i:Int) -> Item {get};
+    associatedtype Item //自己定義一個名叫Item的Type
+    mutating func append(_ item:Item)
+    var count:Int {get}
+    subscript(i:Int) -> Item {get}
 }
 
 //Int專用採納protocol
 struct IntStackP:Container{
-    var items = [Int]();
+    var items = [Int]()
     mutating func push(_ item:Int){
         items.append(item)
     }
     
     mutating func pop() -> Int{
-        return items.removeLast();
+        return items.removeLast()
     }
     
     //以下為Container規定的內容
-    typealias Item = Int ; //把Int取一個相同的小名叫Item(用這招在copy需實作的protocol方法時不用一個一個改)
+    typealias Item = Int  //把Int取一個相同的小名叫Item(用這招在copy需實作的protocol方法時不用一個一個改)
     
     mutating func append(_ item:Item){
-        self.push(item);
+        self.push(item)
     }
     var count:Int {
-        return items.count;
+        return items.count
     }
     subscript(i:Int) -> Item {
-        return items[i];
+        return items[i]
     }
 }
 
 //genetic type採納protocol
 struct StackP<Element>:Container{
-    var items = [Element]();
+    var items = [Element]()
     mutating func push(_ item:Element){
         items.append(item)
     }
     
     mutating func pop() -> Element{
-        return items.removeLast();
+        return items.removeLast()
     }
     
     //以下為Container規定的內容
@@ -161,7 +161,7 @@ struct StackP<Element>:Container{
         self.push(item)
     }
     var count:Int {
-        return items.count;
+        return items.count
     }
     subscript(i:Int) -> Element{
         return items[i]

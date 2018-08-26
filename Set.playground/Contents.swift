@@ -2,7 +2,7 @@
 
 import UIKit
 
-var letters = Set<Character>();
+var letters = Set<Character>()
 letters.count
 letters.insert("a")
 letters.insert("c")
@@ -19,18 +19,18 @@ favoriteGenres.insert("Jazz")
 if let removeGenre = favoriteGenres.remove("rock") {
     print("\(removeGenre) 移除成功")
 }else{
-    print("移除失敗");
+    print("移除失敗")
 }
 
 if favoriteGenres.contains("Funk") {
-    print("有");
+    print("有")
 }else{
-    print("沒有");
+    print("沒有")
 }
 
 //一個一個讀set
 for genre in favoriteGenres {
-    print("\(genre)");
+    print("\(genre)")
 }
 
 //set的集合運算

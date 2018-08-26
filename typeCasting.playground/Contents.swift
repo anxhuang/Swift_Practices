@@ -36,7 +36,7 @@ let library = [ // !!!這裡陣列會自動宣告成最接近的共同父類別!
     Movie(name: "Citizen Kane", director: "Orson Welles"),
     Song(name: "The One And Only", artist: "Chesney Hawkes"),
     Song(name: "Never Gonna Give You Up", artist: "Rick Astley")
-];
+]
 
 
 //檢查是movie還是song 做法一

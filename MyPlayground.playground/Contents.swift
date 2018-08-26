@@ -8,7 +8,7 @@ let implicitInteger = 70
 let implicitDouble = 70.0
 
 let explicitDouble:Double = 70
-//let explicitInteger:Int  = 70.5;
+//let explicitInteger:Int  = 70.5
 		
 //print(myVariable)
 //print(myConstant)
@@ -23,11 +23,11 @@ let appleSummary = " I have " + String(apple) + " apples."
 let fruitsSummary = " I have " + String(apple) + " apples and " + String(orange) + " oranges. total是："+String(apple+orange)+" fruits."
 */
 
-let label = "The width is ";
-let width = 94;
+let label = "The width is "
+let width = 94
 //運算要用相同的資料類型
-let widthLabel = label + String(width);
-let widthLabel1 = "\(label) \(width).";
+let widthLabel = label + String(width)
+let widthLabel1 = "\(label) \(width)."
 
 //字串插補
 let appleSummary = "I have \(apple) apples."

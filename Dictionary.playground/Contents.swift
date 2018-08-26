@@ -3,7 +3,7 @@
 import UIKit
 
 //建立與清空(Empty) Dictionary
-var namesOfIntegers = [Int:String]();
+var namesOfIntegers = [Int:String]()
 namesOfIntegers[16] = "sixteen" //沒有key會自己新增
 namesOfIntegers = [:]
 

@@ -48,18 +48,18 @@ instruction += string2
 welcome.append(exclamationMark) //字串.append(字元)
 
 let multiplier = 3
-let message = "\(multiplier) times 2.5 in \(Double(multiplier) * 2.5)";
+let message = "\(multiplier) times 2.5 in \(Double(multiplier) * 2.5)"
 
 
 //stringABC[stringABC.index] 中括弧內不能放數字 只能放String.Index這個資料類別 !!! 不能放Int !!!
-let greeting = "Guten Tag!";
+let greeting = "Guten Tag!"
 //              012345678910
-greeting[greeting.startIndex]; //.startIndex=起始位置0
+greeting[greeting.startIndex] //.startIndex=起始位置0
 
-greeting[greeting.index(before: greeting.endIndex)]; //.endIndex=結束位置10
-greeting[greeting.index(after: greeting.startIndex)];
-let index = greeting.index(greeting.startIndex, offsetBy: 7);
-greeting[index];
+greeting[greeting.index(before: greeting.endIndex)] //.endIndex=結束位置10
+greeting[greeting.index(after: greeting.startIndex)]
+let index = greeting.index(greeting.startIndex, offsetBy: 7)
+greeting[index]
 
 for index in greeting.indices{
     print("\(greeting[index])", terminator:" ") //terminator預設為\n

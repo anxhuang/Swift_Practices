@@ -8,36 +8,36 @@ struct BlackjackCard{
         case spades = "♠︎", hearts = "♥︎", diamonds = "♦︎", clubs = "♣︎"
     }
     enum Rank:Int{
-        case two = 2, three, four, five, six, seven, eight, nine, ten;
-        case jack, queen, king, ace;
+        case two = 2, three, four, five, six, seven, eight, nine, ten
+        case jack, queen, king, ace
         
         struct Values{ //巢狀第二層 struct > enum > struct
-            let first:Int, second:Int?;
+            let first:Int, second:Int?
         }
         var values:Values{ //computed property
             switch self{
             case .ace:
-                return Values(first: 1, second: 11);
+                return Values(first: 1, second: 11)
             case .jack, .queen, .king:
-                return Values(first: 10, second: nil);
+                return Values(first: 10, second: nil)
             default:
-                return Values(first: self.rawValue, second: nil);
+                return Values(first: self.rawValue, second: nil)
             }
         }
     }
-    let rank:Rank, suit:Suit; //在BlackjackCard裡面建立兩個自訂Type的實體
+    let rank:Rank, suit:Suit //在BlackjackCard裡面建立兩個自訂Type的實體
     var description:String{ //computed property
-        var output = "suit is \(suit.rawValue),";
-        output += " value is \(rank.values.first)";
+        var output = "suit is \(suit.rawValue),"
+        output += " value is \(rank.values.first)"
         if let second = rank.values.second{ //optional binding
             output += " or \(second)"
         }
-        return output;
+        return output
     }
 }
 
-let theAceOfSpades = BlackjackCard(rank: .ace, suit: .spades);
-print(theAceOfSpades.description);
+let theAceOfSpades = BlackjackCard(rank: .ace, suit: .spades)
+print(theAceOfSpades.description)
 
 
 

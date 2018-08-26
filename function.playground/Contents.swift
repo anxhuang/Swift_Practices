@@ -21,51 +21,51 @@ func greet(person:String, alreadyGreeted:Bool) -> String{ //只要定義的引�
     if alreadyGreeted{
         return greetAgain(person: person)
     }else{
-        return greet(person:person);
+        return greet(person:person)
     }
 }
 
 func greetAgain(person:String) -> String{ //func沒有前後順序限制
-    return "hello again, " + person + "!";
+    return "hello again, " + person + "!"
 }
 
 //沒有傳出值(no return type) 但有引數必須明確宣告
 func greet(person1:String){
-    print("Hello, \(person1)");
+    print("Hello, \(person1)")
 }
 
 greet(person: "John")
 
 //
 func printAndCount(string:String) -> Int{
-    print(string);
-    return string.count;
+    print(string)
+    return string.count
 }
 
 printAndCount(string: "abcdef")
 
 func printWithoutCounting(string:String){
-    let _ = printAndCount(string:string); //用_省略回傳值 可以提示coder此處有回傳值
+    let _ = printAndCount(string:string) //用_省略回傳值 可以提示coder此處有回傳值
 }
 
 //傳出多個值 (這裡是用tuple接收)
 func minMax(array:[Int]) -> (min:Int, max:Int){
-    var currentMin = array[0];
-    var currentMax = array[0];
+    var currentMin = array[0]
+    var currentMax = array[0]
     for value in array[1...]{
         if value < currentMin{
-            currentMin = value;
+            currentMin = value
         }else if value > currentMax{
-            currentMax = value;
+            currentMax = value
         }
     }
     
-    return (currentMin,currentMax);
+    return (currentMin,currentMax)
 }
 
-let (min,max) = minMax(array: [8, -6, 2, 109, 3, 71]);
-min;
-max;
+let (min,max) = minMax(array: [8, -6, 2, 109, 3, 71])
+min
+max
 
 //引數名稱和參數名稱相同
 func someFunction (firstParameterName:Int, secondParameterName:Int){
