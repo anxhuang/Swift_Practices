@@ -1,7 +1,7 @@
 # Swift Practices
 
-Version: Swift 4.1
-Tools: macOS + Playground in Xcode 9.4.1
+Language: Swift 4.1  
+Tools: macOS + Playground in Xcode 9.4.1  
 
 ## The Basics
 MyPlayground: var, let, String Interpolation, Multiline String Literals  
